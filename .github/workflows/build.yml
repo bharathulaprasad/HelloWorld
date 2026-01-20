@@ -1,4 +1,4 @@
-name: Build HelloWorld C++
+name: Build and Test HelloWorld C++
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  build-and-test:
     runs-on: windows-latest
 
     steps:
@@ -19,3 +19,7 @@ jobs:
     - name: Build solution
       run: |
         msbuild HelloWorld.sln /p:Configuration=Release /p:Platform=x64
+
+    - name: Run tests
+      run: |
+        HelloWorldTests\x64\Release\HelloWorldTests.exe
