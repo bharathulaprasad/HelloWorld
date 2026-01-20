@@ -1,4 +1,4 @@
-name: Build and Test HelloWorld C++
+name: Build and Test HelloWorld C++ (MSTest)
 
 on:
   push:
@@ -17,9 +17,8 @@ jobs:
       uses: microsoft/setup-msbuild@v2
 
     - name: Build solution
-      run: |
-        msbuild HelloWorld.sln /p:Configuration=Release /p:Platform=x64 /p:OutDir=build\
+      run: msbuild HelloWorld.sln /p:Configuration=Release /p:Platform=x64 /p:OutDir=build\
 
     - name: Run tests
       shell: cmd
-      run: HelloWorldTests\x64\Release\HelloWorldTests.exe
+      run: build\HelloWorldTests.exe

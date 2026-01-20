@@ -1,17 +1,19 @@
-#include "gtest/gtest.h"
-#include "../HelloWorld/main.cpp"
+#include "CppUnitTest.h"
+using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-TEST(MathTests, Addition) {
-    int sum = 2 + 3;
-    EXPECT_EQ(sum, 5);
-}
+TEST_CLASS(HelloWorldTests)
+{
+public:
 
-TEST(HelloTests, PrintHelloWorld) {
-    std::string hello = "Hello, World from GitHub Actions + Visual Studio C++!";
-    EXPECT_EQ(hello, "Hello, World from GitHub Actions + Visual Studio C++!");
-}
+    TEST_METHOD(TestAddition)
+    {
+        int sum = 2 + 3;
+        Assert::AreEqual(sum, 5);
+    }
 
-int main(int argc, char **argv) {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}
+    TEST_METHOD(TestHelloWorldString)
+    {
+        std::string hello = "Hello, World from GitHub Actions + Visual Studio C++!";
+        Assert::AreEqual(hello, std::string("Hello, World from GitHub Actions + Visual Studio C++!"));
+    }
+};
