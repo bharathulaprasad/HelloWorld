@@ -19,7 +19,7 @@ jobs:
     - name: Build solution
       run: msbuild HelloWorld.sln /p:Configuration=Release /p:Platform=x64 /p:OutDir=build\
 
-    - name: Run tests
-      run: |
-        vstest.console.exe build\HelloWorldTests.exe
-
+    - name: Run MSTest tests
+      uses: microsoft/vstest@v1
+      with:
+        testAssembly: 'build\HelloWorldTests.exe'
