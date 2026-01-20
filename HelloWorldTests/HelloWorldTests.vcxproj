@@ -20,12 +20,12 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Utility</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
 </PropertyGroup>
 
 <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Utility</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
 </PropertyGroup>
 
@@ -34,7 +34,9 @@
 
   <ItemGroup>
     <ClCompile Include="HelloWorldTests.cpp" />
-  </ItemGroup>
+    <ClCompile Include="main.cpp" />  <!-- Add this line -->
+</ItemGroup>
+
 
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 </Project>
