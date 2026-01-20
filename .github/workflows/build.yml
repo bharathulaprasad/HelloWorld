@@ -20,5 +20,6 @@ jobs:
       run: msbuild HelloWorld.sln /p:Configuration=Release /p:Platform=x64 /p:OutDir=build\
 
     - name: Run tests
-      shell: cmd
-      run: build\HelloWorldTests.exe
+      run: |
+        vstest.console.exe build\HelloWorldTests.exe
+
