@@ -1,4 +1,4 @@
-name: Build and Test HelloWorld C++ (MSTest)
+name: Build and Test HelloWorld C++
 
 on:
   push:
@@ -19,7 +19,9 @@ jobs:
     - name: Build solution
       run: msbuild HelloWorld.sln /p:Configuration=Release /p:Platform=x64 /p:OutDir=build\
 
+    - name: List test platform
+      run: dir "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\Extensions\TestPlatform"
+
     - name: Run MSTest tests
-      uses: microsoft/vstest@v1
-      with:
-        testAssembly: 'build\HelloWorldTests.exe'
+      shell: cmd
+      run: "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\Extensions\\TestPlatform\\vstest.console.exe\" build\\HelloWorldTests.exe"
