@@ -18,7 +18,7 @@ jobs:
 
     - name: Build solution
       run: |
-        msbuild HelloWorld.sln /p:Configuration=Release /p:Platform=x64
+        msbuild HelloWorld.sln /p:Configuration=Release /p:Platform=x64 /p:OutDir=build\
 
     - name: Run tests
       shell: cmd
