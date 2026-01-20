@@ -13,8 +13,13 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D2F3F5E2-1234-4567-89AB-ABCDEF123456}.Debug|x64.ActiveCfg = Debug|x64
+		{D2F3F5E2-1234-4567-89AB-ABCDEF123456}.Debug|x64.Build.0 = Debug|x64
 		{D2F3F5E2-1234-4567-89AB-ABCDEF123456}.Release|x64.ActiveCfg = Release|x64
+		{D2F3F5E2-1234-4567-89AB-ABCDEF123456}.Release|x64.Build.0 = Release|x64
+
 		{A1B2C3D4-5678-90AB-CDEF-1234567890AB}.Debug|x64.ActiveCfg = Debug|x64
+		{A1B2C3D4-5678-90AB-CDEF-1234567890AB}.Debug|x64.Build.0 = Debug|x64
 		{A1B2C3D4-5678-90AB-CDEF-1234567890AB}.Release|x64.ActiveCfg = Release|x64
+		{A1B2C3D4-5678-90AB-CDEF-1234567890AB}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 EndGlobal
